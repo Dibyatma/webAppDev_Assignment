@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search/dist/leaflet-search.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-measure/dist/leaflet-measure.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>NASA Forest Fire Data</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Fire Data</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Repository
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Github</a>
+                        <a class="dropdown-item" href="#">Google Drive</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Nasa Fire Data</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Forest Fire Data</h1>
+    </header>
+    <main>
+        <div id="map"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-search/dist/leaflet-search.min.js"></script>
+    <script src="https://unpkg.com/leaflet-measure/dist/leaflet-measure.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Auto-scroll down effect for dropdown items
+        document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+            dropdown.addEventListener('mouseenter', function () {
+                const dropdownMenu = this.querySelector('.dropdown-menu');
+                if (dropdownMenu.scrollHeight > dropdownMenu.clientHeight) {
+                    // Scroll down to the bottom
+                    dropdownMenu.scrollTop = dropdownMenu.scrollHeight - dropdownMenu.clientHeight;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
