@@ -6,7 +6,7 @@ body {
 }
 /* Custom styles for the Bootstrap navbar */
 .navbar {
-    background-color: #4addf0;
+    background-color: #042a41;
 }
 .navbar-nav{
     display: flex;
@@ -18,7 +18,7 @@ body {
 
 .navbar-brand:hover,
 .navbar-nav .nav-link:hover {
-    color: #085e59;
+    color: #24ee9a;
 }
 
 .navbar-toggler-icon {

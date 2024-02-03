@@ -53,12 +53,12 @@
     <script src="https://unpkg.com/leaflet-measure/dist/leaflet-measure.min.js"></script>
     <script src="app.js"></script>
     <script>
-        // Auto-scroll down effect for dropdown items
+// Auto-scroll down effect for dropdown items
         document.querySelectorAll('.dropdown').forEach(function (dropdown) {
             dropdown.addEventListener('mouseenter', function () {
                 const dropdownMenu = this.querySelector('.dropdown-menu');
                 if (dropdownMenu.scrollHeight > dropdownMenu.clientHeight) {
-                    // Scroll down to the bottom
+ // Scroll down to the bottom
                     dropdownMenu.scrollTop = dropdownMenu.scrollHeight - dropdownMenu.clientHeight;
                 }
             });
