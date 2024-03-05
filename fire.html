@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Link JavaScript file -->
+    <script src="./js/fire.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- leaflet provider -->
+    <script src="./js/leaflet-providers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>First Web App</title>
+</head>
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div id="flag" class="pull-left" style="padding:10px 10px 0 0;">
+            <img alt="Waving Nepali Flag" src="http://nlupgeoportal.gov.np/Content/logo/flag.gif" style="height:45px;width:35px;">
+        </div>
+        <a class="navbar-brand" href="#">My First Web App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="fire.html">Fire Data Map <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Repository
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://github.com/Dibyatma/webGis_Assignment">Github</a>
+                        <a class="dropdown-item" href="#">Google Drive</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@0.0,0.0,3.0z">Nasa Fire Data</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div id="map"></div> 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="./js/fireData-2023-12-30.js"></script>
+    <script src="./js/nepaldata.js"></script>
+    </main>
+
+    <!--Add footer-->
+    <footer>
+        <p>&copy; Made Using Leaflet JS | <a href="https://github.com/Dibyatma/webGis_Assignment"> Source Code</a> <a target="_blank"> <img alt="Github" href="https://github.com/" src="./media/github-icon.png" /> </a>
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
