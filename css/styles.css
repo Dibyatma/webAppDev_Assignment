@@ -1,4 +1,61 @@
 /* styles.css */
+#Buttons{
+    display:inline-flexbox;
+    background-color: #4CAF50;
+    align-items: center;
+    text-align: center;
+    padding: 0%;    
+}
+/* Style for the buttons */
+#bufferButton{
+    display: inline-flex;
+    border: 2px;
+    border-radius: 20px; /* Adjust the value to control the roundness */
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Popping color */
+    color: rgb(17, 16, 16); /* Text color */
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#midpointButton{
+    display: inline-flex;
+    border: none;
+    border-radius: 20px; /* Adjust the value to control the roundness */
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Popping color */
+    color: rgb(17, 17, 17); /* Text color */
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#resetButton{
+    display: inline-flex;
+    border: none;
+    border-radius: 20px; /* Adjust the value to control the roundness */
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Popping color */
+    color: rgb(15, 15, 15); /* Text color */
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Hover effect for the buttons */
+#bufferButton:hover {
+    background-color: #a0456b; /* Darker shade of popping color */
+}
+
+#midpointButton:hover {
+    background-color: #a0456b; /* Darker shade of popping color */
+}
+
+#resetButton:hover {
+    background-color: #a0456b; /* Darker shade of popping color */
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -6,14 +63,14 @@ body {
 }
 /* Custom styles for the Bootstrap navbar */
 .navbar {
-    background-color: #042a41;
+    background-color: rgb(61, 94, 94);
 }
 .navbar-nav{
     display: flex;
     align-self: auto;
 }
  .nav-link {
-    color: #9b1184;
+    color: #f7f1f6;
 }
 
 .navbar-brand:hover,
@@ -55,11 +112,14 @@ main {
     border: 1px solid #0f0f0f;
 }
 
-/* Sticky footer styles */
-footer {
-    text-align: center;
-    background-color: #dfa78e;
-    color: #141414;
-    padding: 10px;
-}
 
+/* Sticky footer styles */
+.footer {
+    padding: 0%;
+    width: 100%;
+    background-color: rgb(67, 97, 97);
+    color: white;
+    text-align: center;
+ }
+
+ 

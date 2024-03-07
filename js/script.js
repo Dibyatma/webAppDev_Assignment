@@ -91,8 +91,29 @@ var overlays = {
 // Add layer control
 L.control.layers(baseLayers, overlays).addTo(map);
 
+ // Define global variables to store event listeners and marker layers
+var bufferEventListener = null;
+var bufferMarkerLayer = null;
+
+var midpointEventListener = null;
+var midpointMarkerLayer = null;
+// Call the loadMidpointFunctionality function from script.js
+loadMidpointFunctionality(map);
+
+
+// Function to reset the map
+function resetMap(map) {
+    // Clear all layers from the map
+    map.eachLayer(function (layer) {
+        if (layer instanceof L.Marker || layer instanceof L.Path) {
+            map.removeLayer(layer);
+        }
+    });
+}
 /*===================================================
                       SEARCH BUTTON               
 ===================================================*/
 
 L.Control.geocoder().addTo(map);
+
+

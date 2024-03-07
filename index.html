@@ -24,6 +24,7 @@
     <!-- leaflet provider -->
     <script src="./js/leaflet-providers.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@latest/turf.min.js"></script>
     <title>First Web App</title>
 </head>
     <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
@@ -64,11 +65,30 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     </main>
+    <!-- Buffer functionality -->
+    <div id="Buttons">
+    <button id="bufferButton" onclick="loadBufferFunctionality(map)">Buffer</button>
+    <!-- Midpoint Functionality -->
+    <button id="midpointButton" onclick="loadMidpointFunctionality(map)">Midpoint</button> 
+     <!-- Create a button for resetting -->
+     <button id="resetButton" onclick="resetMap(map)">Reset</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"></script>
+    
+    <!-- Buffer JS -->
+    <script src="/js/buffer.js"></script>
+    
+    <!-- Midpoint JS -->
+    <script src="/js/midpoint.js"></script>
+    </div>
+    </div>
+
 
     <!--Add footer-->
-    <footer>
-        <p>&copy; Made Using Leaflet JS | <a href="https://github.com/Dibyatma/webGis_Assignment"> Source Code</a> <a target="_blank"> <img alt="Github" href="https://github.com/" src="./media/github-icon.png" /> </a>
-    </footer>
+    <div class="footer">
+        <p>
+            &copy; Made Using Leaflet JS | <a href="https://github.com/Dibyatma/webGis_Assignment"> Source Code</a> <a target="_blank"> <img alt="Github" href="https://github.com/" src="./media/github-icon.png" 
+        </p>
+      </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./js/fireData-2023-12-30.js"></script>
 </body>
