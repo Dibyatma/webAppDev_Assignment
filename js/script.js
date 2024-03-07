@@ -1,4 +1,3 @@
-
 // Initialize the map
 var map = L.map('map').setView([28.39765, 84.1299], 8);
 
@@ -12,7 +11,7 @@ var satellite = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'
     subdomains:['mt0','mt1','mt2','mt3']
 });
 
-//load wms form geoserver
+//load wms from geoserver
 const geoserverLayer1 = L.tileLayer.wms("http://localhost:8080/geoserver/GIS/wms?", {
     layers: 'GIS:sunsariDistrict',
     format: 'image/png',
@@ -22,7 +21,7 @@ const geoserverLayer1 = L.tileLayer.wms("http://localhost:8080/geoserver/GIS/wms
 });
 geoserverLayer1.addTo(map);
 
-//load wms form geoserver
+//load wms from geoserver
 const geoserverLayer2 = L.tileLayer.wms("http://localhost:8080/geoserver/GIS/wms?", {
     layers: 'GIS:nepal_health_facilities',
     format: 'image/png',
@@ -42,11 +41,11 @@ var markerLocation = [28.39765, 84.1299];
 // Create marker at desired location
 var marker = L.marker(markerLocation, {
     // Make the marker draggable if needed
-    draggable: false
+    draggable: true
 }).addTo(map);
 
 // Create popup with content
-var popupContent = "This is the center coordinate of Nepal. (Coordinate:Lat. 28.39765, Lng. 84.1299)";
+var popupContent = "This is draggable Marker.(Coordinate:Lat. 28.39765, Lng. 84.1299)";
 var popup = L.popup().setContent(popupContent);
 
 // Bind popup to marker
@@ -65,13 +64,10 @@ marker.on('mouseout', function (e) {
                       GEOJSON               
 ===================================================*/
 
-// Add overlay layers
-var cities = L.geoJSON(); // Example overlay layer
-var Provinces = L.geoJSON()
+// Removed the cities GeoJSON layer
 
-// Add markers to the cities layer
-L.marker([51.5, -0.09]).bindPopup('London').addTo(cities);
-L.marker([48.85, 2.35]).bindPopup('Paris').addTo(cities);
+// Add overlay layers
+var Provinces = L.geoJSON()
 
 // Create an object to hold base layers
 var baseLayers = {
@@ -79,19 +75,17 @@ var baseLayers = {
     "Satellite": satellite,
     "Sunsari District": geoserverLayer1,
     "Health Facilities": geoserverLayer2
-
 };
 
 // Create an object to hold overlay layers
 var overlays = {
-    "WMS District": cities,
     "WMS Province": Provinces
 };
 
 // Add layer control
 L.control.layers(baseLayers, overlays).addTo(map);
 
- // Define global variables to store event listeners and marker layers
+// Define global variables to store event listeners and marker layers
 var bufferEventListener = null;
 var bufferMarkerLayer = null;
 
@@ -99,7 +93,6 @@ var midpointEventListener = null;
 var midpointMarkerLayer = null;
 // Call the loadMidpointFunctionality function from script.js
 loadMidpointFunctionality(map);
-
 
 // Function to reset the map
 function resetMap(map) {
@@ -115,5 +108,3 @@ function resetMap(map) {
 ===================================================*/
 
 L.Control.geocoder().addTo(map);
-
-

@@ -115,6 +115,7 @@ main {
 
 /* Sticky footer styles */
 .footer {
+    margin: 0;
     padding: 0%;
     width: 100%;
     background-color: rgb(67, 97, 97);
